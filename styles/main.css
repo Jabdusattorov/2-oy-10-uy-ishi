@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-transform: uppercase;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: x-large;
+    background-color: rgb(31, 31, 31);
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(14, 70px);
+}
+.child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.child-1{
+    background-color: black;
+}
+.child-2{
+    background-color: red;
+}
+.child-3{
+    background-color: rgb(38, 137, 177);
+    grid-row: span 3;
+}
+.child-4{
+    background-color: darkblue;
+    grid-row: span 3;
+}
+.child-0{
+    display: none;
+}
+.child-5{
+    background-color: rgb(213, 175, 20);
+    grid-row: span 2;
+    color: black;
+}
+.child-6{
+    background-color: rgb(20, 213, 129);
+    grid-row: span 2;
+    color: black;
+}
+.child-7{
+    background-color: rgb(156, 217, 255);
+    grid-row: span 2;
+    color: black;
+}
+
+@media (min-width:450px) {
+    .container{
+        grid-template-columns: repeat(4, 25%);
+        grid-template-areas:
+        'a a a a'
+        'b b b b'
+        'b b b b'
+        'b b b b'
+        'b b b b'
+        'c d d d'
+        'c d d d'
+        'c d d d'
+        'c d d d'
+        'c e e e'
+        'c e e e'
+        'c f f g'
+        'c f f g'
+        ;
+    }
+    .child-1{
+        grid-area: a;
+    }
+    .child-3{
+        grid-area: b;
+    }
+    .child-2{
+        grid-area: c;
+    }
+    .child-4{
+        grid-area: d;
+    }
+    .child-5{
+        grid-area: e;
+    }
+    .child-6{
+        grid-area: f;
+    }
+    .child-7{
+        grid-area: g;
+    }
+}
+@media (min-width:1000px) {
+    .container{
+        background-color: white;
+        max-width: 1300px;
+        margin: 0 auto;
+        grid-template-rows: repeat(12, 70px);
+        grid-template-areas: 
+        'a b b b'
+        'c c c c'
+        'c c c c'
+        'c c c c'
+        'c c c c'
+        'c c c c'
+        'd d e f'
+        'd d e f'
+        'd d e g'
+        'd d e g'
+        'h h h h'
+        'h h h h'
+        ;
+    }
+    .child-1{
+        grid-area: a;
+    }
+    .child-2{
+        grid-area: b;
+    }
+    .child-3{
+        grid-area: c;
+    }
+    .child-4{
+        grid-area: d;
+    }
+    .child-0{
+        grid-area: e;
+    }
+    .child-5{
+        grid-area: h;
+    }
+    .child-6{
+        grid-area: g;
+    }
+    .child-7{
+        grid-area: f;
+    }
+}
